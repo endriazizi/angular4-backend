@@ -22,6 +22,9 @@ app.use(bodyParser.json());
 
 // cors
 
-//routes
+//routes body-parser
+app.get('/test', (req, res) => {
+    res.status(200).send({message:'test method'});
+});
 
 module.exports =  app;

@@ -11,12 +11,14 @@ var port = process.env.PORT || 3000;
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/zoo', { useMongoClient: true })
     .then(() => {
-        console.log('connected to mongo databse correctly!');
+        console.log('connected to mongo database correctly!');
 
         //lunch service
         app.listen(port, () => {
             console.log("Node and Express service is Working Correctly");
             //on browser for APIRestFul http://localhost:3000/
+            //right now we do not have any method
+            // output Cannot Get /
         });
 })
 .catch(err => console.log(err));
