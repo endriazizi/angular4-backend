@@ -22,6 +22,10 @@ warnig fixing:
 //create variable for mongoose
 var mongoose =require ('mongoose')
 
+1)Web Services Node & Express
+2)Our first APIRest
+3)Create Models
+
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/zoo', { useMongoClient: true })
