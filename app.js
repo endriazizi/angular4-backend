@@ -13,14 +13,24 @@ var bodyParser = require('body-parser');
 //invoke express function, express framework
 var app = express();
 
-//routes
+//adding routes
+var user_routes = require('./routes/user');
+
 
 //middlewares bodyParser
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-// cors
+//cors
+
+//basics routes
+//the middleware is /api - is the our API prefix
+app.use('/api', user_routes);
+//for example: http://localhost:3000/api/test-user-contoller
+
+
+
 
 //routes body-parser
 app.get('/test', (req, res) => {
